@@ -1,0 +1,78 @@
+html {
+    font-family: $default-font-family;
+    font-size: $default-font-size;
+    //font-weight: $font-weight-regular;
+    font-weight: 400;
+    -webkit-text-size-adjust: 100%;
+    // background: $color-dark-steel-900;
+    //color: $color-white;
+}
+    
+body {
+    position: relative;
+    margin: 0;
+}
+    
+svg {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+    
+button {
+    background: transparent;
+    cursor: pointer;
+    
+    &:focus {
+        outline: none;
+    }
+}
+    
+::-webkit-scrollbar:horizontal{
+    display: none;
+}
+
+//TODOs
+.main-content{
+    //height: calc(100vh - #{$site-menu-size});
+    height: 100%;
+    margin: $site-menu-size 0;
+    @include tablet {
+        margin-left: $site-menu-size;
+        margin: $site-menu-size 0 0 $site-menu-size;
+    }
+}
+
+.input-form{
+    border: 1px solid $light-secondary-color;
+    border-radius: 70px;
+    background-color: transparent;
+    outline: none;
+    padding: $space;
+}
+
+.input-simple{
+    border: 1px solid $light-secondary-color;
+    border-radius: 70px;
+    background-color: transparent;
+    outline: none;
+    padding: $space;
+}
+
+svg{
+    cursor: pointer;
+}
+
+.sm-hide{
+    display: none;
+    @include tablet {
+        display: block;
+    }
+}
+
+.lg-hide{
+    display: block;
+    @include tablet {
+        display: none;
+    }
+}

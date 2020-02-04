@@ -1,0 +1,36 @@
+.side-menu{
+    display: flex;
+    position: fixed;
+    background: linear-gradient(180deg, #2D6666 0%, #0A2829 100%); //TODOs
+    flex-direction: row;
+    width: 100%;
+    height: $site-menu-size;
+    padding: 0;
+    align-items: center;
+    justify-content: space-around;
+    bottom: 0;
+    z-index: 10;
+
+    @include tablet {
+        left: 0;
+        top: $site-menu-size;
+        height: 100vh;
+        width: $site-menu-size;
+        flex-direction: column;  
+        align-items: center;
+        padding: $space-xxl 0;
+        justify-content: unset;
+    }
+
+    &__icon svg{
+        width: 24px;
+        fill: $light-secondary-color;
+        @include tablet {
+            margin-bottom: $space-xxxl;
+        }
+    
+        &:hover{
+            fill: $highlight-color;
+        }
+    }
+}

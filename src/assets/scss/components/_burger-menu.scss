@@ -1,0 +1,57 @@
+.burger-menu{
+    &__cta{
+        margin-right: $space;
+        svg {
+            width: 24px;
+            fill: $light-secondary-color;
+        }
+    }
+
+    &__close-cta{
+        position: absolute;
+        right: $space-m;
+        svg {
+            width: 24px;
+            fill: $light-secondary-color;
+        }
+    }
+
+    &__list{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: $secondary-color;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding: $space-m;
+        a {
+            color: $color-white;
+            text-decoration: none;
+            margin-bottom: $space;
+            font-size: $font-size-s;
+        }
+    }
+}
+
+.slide-enter-active, .slide-leave-active {
+    transition: opacity 1s;
+}
+.slide-enter, .slide-leave-to {
+    opacity: 0;
+}
+
+.slide-down {
+    animation-name: slideDown;
+    animation-timing-function: ease-in-out;
+    animation-duration: .5s;
+}
+    
+@keyframes slideDown {
+    0% {
+        top: -130px;
+    }
+    100% {
+        top: 0px;
+    }
+}

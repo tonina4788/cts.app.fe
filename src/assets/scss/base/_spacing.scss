@@ -1,0 +1,33 @@
+@import "media-queries";
+
+// SPACING
+$space-xs: 2px;
+$space-s: 4px;
+$space: 8px;
+$space-m: 16px;
+$space-l: 24px;
+$space-xl: 32px;
+$space-xxl: 40px;
+$space-xxxl: 60px;
+// ===========================================
+
+//Border
+$border-width: 1px;
+$border-width-m: 2px;
+// ===========================================
+
+//Border radius
+$border-radius-none: 0px;
+$border-radius: 2px;
+$border-radius-small: 4px;
+$border-radius-pill: 64px;
+$border-radius-bubble: 50%;
+
+// ===========================================
+
+//Header height
+$site-menu-size: 67px;
+
+@include tablet {
+    $site-menu-size: 88px;
+}

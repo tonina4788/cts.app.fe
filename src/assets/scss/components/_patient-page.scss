@@ -1,0 +1,119 @@
+.patient-info{
+    height: 100%;
+    @include tablet {
+        height: calc(100vh - #{$site-menu-size});
+    }
+    &__header{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: $space-xl $space;
+
+        &__tools {
+            display: flex;
+            margin-top: $space;
+            @include tablet {
+                font-size: $font-size-l;
+                margin-top: 0;
+            }
+            &__tool {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                cursor: pointer;
+                margin-right: $space-m;
+                &:last-child{
+                    margin-right: 0;
+                }
+                &__text{
+                    font-size: $font-size-tiny;
+                    margin-bottom: $space-s;
+                    font-weight: 600;
+                    text-align: center;
+                }
+                &__icon {
+                    svg {
+                        fill: $secondary-color;
+                        width: 24px;
+                    }
+                }
+            }
+        }
+        
+        &__title{
+            margin: 0;
+        }
+    }
+    &__body {
+        height: calc(100% - 89px);
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+        }
+        &__personal-details {
+            flex: 1;
+            background-color: $primary-color;
+            padding: $space-xl $space-xxl $space-xl $space-xl;
+            //box-shadow: -26px 33px 59px 0 rgba(0,0,0,0.34);
+            position: relative;
+            &__edit-btn {
+                position: absolute;
+                right: $space;
+                top: $space;
+                svg {
+                    width: 12px;
+                    fill: $highlight-color;
+                }
+            }
+            &__field{
+                &__text{
+                    color: $light-secondary-color;
+                    margin: $space 0 $space $space;
+                    font-size: $font-size-xs;
+                }
+                &__value{
+                    margin-bottom: $space-m;
+                    width: 100%;
+                    color: $color-white;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        &__appointments {
+            flex: 2;
+            &__row {
+                display: flex;
+                color: $color-white;
+                font-size: $font-size-xs;
+                padding: $space $space-s;
+                cursor: pointer;
+                &:nth-child(even){
+                    background-color: $primary-color;
+                }
+                &:nth-child(odd){
+                    background-color: $secondary-color;
+                }
+                &__cell {
+                   flex: 1;
+                   &.--edit-row{
+                        flex: unset;
+                        padding-right: $space-xl;
+                    }
+                }
+            }
+            &__no-appointments{
+                font-weight: 700;
+                text-align: center;
+                &__icon {
+                    display: block;
+                    svg{
+                        width: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
